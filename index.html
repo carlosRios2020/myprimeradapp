@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactuar con Contrato</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+          background-color: #f8f9fa;
+          font-family: Arial, sans-serif;
+      }
+      .container {
+          max-width: 600px;
+          margin-top: 50px;
+          padding: 20px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+          color: #007bff;
+          text-align: center;
+      }
+      .btn {
+          margin-top: 15px;
+      }
+      #connectButton {
+          margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Interactuar con Contrato</h1>
+
+      <!-- Conectar MetaMask -->
+      <button id="connectButton" class="btn btn-warning w-100">
+        Conectar MetaMask
+      </button>
+      <p id="accountAddress" class="mt-3"></p>
+
+      <div>
+        <h4>Consultar Texto</h4>
+        <button id="getTextButton" class="btn btn-primary w-100">
+          Consultar Texto
+        </button>
+        <p id="getTextResult" class="mt-2"></p>
+      </div>
+
+      <div>
+        <h4>Almacenar Nuevo Texto</h4>
+        <input
+          type="text"
+          id="storeTextInput"
+          class="form-control"
+          placeholder="Nuevo Texto"
+        />
+        <button id="storeTextButton" class="btn btn-success w-100">
+          Almacenar Texto
+        </button>
+        <p id="storeTextResult" class="mt-2"></p>
+      </div>
+
+      <div>
+        <h4>Consultar Propietario</h4>
+        <button id="getOwnerButton" class="btn btn-info w-100">
+          Consultar Propietario
+        </button>
+        <p id="getOwnerResult" class="mt-2"></p>
+      </div>
+    </div>
+
+    <!-- Ethers.js -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.6.umd.min.js"></script>
+    <!-- App Script -->
+    <script src="./src/script.js"></script>
+  </body>
+</html>
